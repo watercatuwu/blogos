@@ -1,0 +1,17 @@
+# Nuxt.js
+node_modules
+.nuxt
+dist
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+output.log
+.DS_Store
+*.local
+.output
+.data
+
+# VS Code
+.vscode
