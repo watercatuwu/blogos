@@ -9,14 +9,14 @@
 import Posts from '/components/posts.vue'
 
 useHead({
-    title: 'About',
+    title: 'Posts',
     meta: [
-        { name: 'description', content: 'Learn more about us and our mission.' },
-        { property: 'og:title', content: 'About Us' },
-        { property: 'og:description', content: 'Learn more about us and our mission.' },
+        { name: 'description', content: 'My Posts' },
+        { property: 'og:title', content: 'Posts' },
+        { property: 'og:description', content: 'My Posts.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: `https://yourdomain.com/about` },
-        { property: 'og:image', content: '/images/about-og-image.jpg' }
+        { property: 'og:url', content: `https://watercat.vercel.app/posts` },
+        { property: 'og:image', content: '/cap.png' }
     ]
 })
 </script>

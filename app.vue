@@ -3,13 +3,6 @@
 </template>
 
 <script setup>
-const colorMode = useColorMode()
-
-useHead({
-  htmlAttrs: {
-    class: colorMode.value
-  }
-})
 </script>
 
 <style>

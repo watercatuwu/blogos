@@ -13,6 +13,21 @@
 import Grid from '/components/grid.vue'
 import Dock from '/components/dock.vue'
 import Toaster from '/components/toaster.vue'
+
+useHead({
+	title: 'Watercat BlogOS',
+	meta: [
+		{ name: 'description', content: 'A desktop-like blog experience.' },
+		{ property: 'og:title', content: 'Watercat Blog OS' },
+		{ property: 'og:description', content: 'A desktop-like blog experience.' },
+		{ property: 'og:type', content: 'website' },
+		{ property: 'og:url', content: `https://watercat.vercel.app` },
+		{ property: 'og:image', content: '/cap.png' }
+	],
+	link: [
+		{ rel: 'icon', type: 'image/png', href: '/cap.png' },
+	]
+})
 </script>
 
 <style scoped>

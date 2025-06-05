@@ -3,6 +3,7 @@ date: 2025-06-04
 title: About me
 tags:
   - 關於
+image: /oguri.jpg
 ---
 
 ![oguricap](https://i.meee.com.tw/uJlWofk.gif)

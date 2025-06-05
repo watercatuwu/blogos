@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   modules: [
@@ -7,8 +8,13 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/content',
     '@nuxtjs/mdc',
-    '@nuxtjs/color-mode'
   ],
+  tailwindcss: {
+    config: {
+      darkMode: 'class',
+      plugins: []
+    }
+  },
   content: {
     build: {
       markdown: {

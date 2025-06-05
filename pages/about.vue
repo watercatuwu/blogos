@@ -25,8 +25,8 @@ useHead({
         { property: 'og:title', content: 'About Us' },
         { property: 'og:description', content: 'Learn more about us and our mission.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: `https://yourdomain.com/about` },
-        { property: 'og:image', content: '/images/about-og-image.jpg' }
+        { property: 'og:url', content: `https://watercat.vercel.app/about` },
+        { property: 'og:image', content: '/cap.png' }
     ]
 })
 </script>

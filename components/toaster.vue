@@ -1,5 +1,4 @@
 <template>
-    <!--
     <div class="fixed bottom-0 right-0 m-4 mb-20 z-50">
         <transition-group
             name="toast"
@@ -15,7 +14,7 @@
                 <button @click="removeToast(index)" class="text-red-400">Dismiss</button>
             </div>
         </transition-group>
-    </div>-->
+    </div>
 </template>
 
 <script setup>
