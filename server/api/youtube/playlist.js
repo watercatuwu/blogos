@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 export default defineEventHandler(async event => {
-  const apiKey = process.env.YOUTUBE_API_KEY;
+  const APIKEY = process.env.GCP_API_KEY;
   const query = getQuery(event)
   const playlistId = query.playlistId
 
-  if (!apiKey) {
+  if (!APIKEY) {
     throw createError({
       statusCode: 400,
       statusMessage: 'Missing API Key'
@@ -25,7 +25,7 @@ export default defineEventHandler(async event => {
         part: 'snippet',
         playlistId,
         maxResults: 50,
-        key: apiKey
+        key: APIKEY
       }
     });
 

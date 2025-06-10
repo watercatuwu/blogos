@@ -52,8 +52,6 @@ onMounted(()=>{
 
     updateYoutubeIframe()
 
-    console.log(player)
-
     player.on('stateChange', (event) => {
         if (playList.value.length>0) {
             if (event.data == 0) {
@@ -93,6 +91,7 @@ const updateYoutubeIframe = async() => {
 
     if (videoId) {
         nowPlayingID.value = videoId
+        playList.value = []
     } 
     if (listId) {
         try {
@@ -106,8 +105,6 @@ const updateYoutubeIframe = async() => {
             inputValue.value = "Server Error";
             return
         }
-        //console.log(data.value)
-        playList.value = data.value.items
     } 
 }
 

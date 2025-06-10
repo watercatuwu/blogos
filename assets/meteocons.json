@@ -1,0 +1,282 @@
+{
+  "0": {
+    "outline": {
+      "day": "meteocons:clear-day",
+      "night": "meteocons:clear-night"
+    },
+    "fill": {
+      "day": "meteocons:clear-day-fill",
+      "night": "meteocons:clear-night-fill"
+    }
+  },
+  "1": {
+    "outline": {
+      "day": "meteocons:clear-day",
+      "night": "meteocons:clear-night"
+    },
+    "fill": {
+      "day": "meteocons:clear-day-fill",
+      "night": "meteocons:clear-night-fill"
+    }
+  },
+  "2": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-day",
+      "night": "meteocons:partly-cloudy-night"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-day-fill",
+      "night": "meteocons:partly-cloudy-night-fill"
+    }
+  },
+  "3": {
+    "outline": {
+      "day": "meteocons:overcast-day",
+      "night": "meteocons:overcast-night"
+    },
+    "fill": {
+      "day": "meteocons:overcast-day-fill",
+      "night": "meteocons:overcast-night-fill"
+    }
+  },
+  "45": {
+    "outline": {
+      "day": "meteocons:fog-day",
+      "night": "meteocons:fog-night"
+    },
+    "fill": {
+      "day": "meteocons:fog-day-fill",
+      "night": "meteocons:fog-night-fill"
+    }
+  },
+  "48": {
+    "outline": {
+      "day": "meteocons:fog-day",
+      "night": "meteocons:fog-night"
+    },
+    "fill": {
+      "day": "meteocons:fog-day-fill",
+      "night": "meteocons:fog-night-fill"
+    }
+  },
+  "51": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-day-drizzle",
+      "night": "meteocons:partly-cloudy-night-drizzle"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-day-drizzle-fill",
+      "night": "meteocons:partly-cloudy-night-drizzle-fill"
+    }
+  },
+  "53": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-day-rain",
+      "night": "meteocons:partly-cloudy-night-rain"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-day-rain-fill",
+      "night": "meteocons:partly-cloudy-night-rain-fill"
+    }
+  },
+  "55": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-day-rain",
+      "night": "meteocons:partly-cloudy-night-rain"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-day-rain-fill",
+      "night": "meteocons:partly-cloudy-night-rain-fill"
+    }
+  },
+  "56": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-sleet-day",
+      "night": "meteocons:partly-cloudy-sleet-night"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-sleet-day-fill",
+      "night": "meteocons:partly-cloudy-sleet-night-fill"
+    }
+  },
+  "57": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-sleet-day",
+      "night": "meteocons:partly-cloudy-sleet-night"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-sleet-day-fill",
+      "night": "meteocons:partly-cloudy-sleet-night-fill"
+    }
+  },
+  "61": {
+    "outline": {
+      "day": "meteocons:rain",
+      "night": "meteocons:rain"
+    },
+    "fill": {
+      "day": "meteocons:rain-fill",
+      "night": "meteocons:rain-fill"
+    }
+  },
+  "63": {
+    "outline": {
+      "day": "meteocons:rain",
+      "night": "meteocons:rain"
+    },
+    "fill": {
+      "day": "meteocons:rain-fill",
+      "night": "meteocons:rain-fill"
+    }
+  },
+  "65": {
+    "outline": {
+      "day": "meteocons:rain",
+      "night": "meteocons:rain"
+    },
+    "fill": {
+      "day": "meteocons:rain-fill",
+      "night": "meteocons:rain-fill"
+    }
+  },
+  "66": {
+    "outline": {
+      "day": "meteocons:sleet-day",
+      "night": "meteocons:sleet-night"
+    },
+    "fill": {
+      "day": "meteocons:sleet-day-fill",
+      "night": "meteocons:sleet-night-fill"
+    }
+  },
+  "67": {
+    "outline": {
+      "day": "meteocons:sleet-day",
+      "night": "meteocons:sleet-night"
+    },
+    "fill": {
+      "day": "meteocons:sleet-day-fill",
+      "night": "meteocons:sleet-night-fill"
+    }
+  },
+  "71": {
+    "outline": {
+      "day": "meteocons:snow-day",
+      "night": "meteocons:snow-night"
+    },
+    "fill": {
+      "day": "meteocons:snow-day-fill",
+      "night": "meteocons:snow-night-fill"
+    }
+  },
+  "73": {
+    "outline": {
+      "day": "meteocons:snow-day",
+      "night": "meteocons:snow-night"
+    },
+    "fill": {
+      "day": "meteocons:snow-day-fill",
+      "night": "meteocons:snow-night-fill"
+    }
+  },
+  "75": {
+    "outline": {
+      "day": "meteocons:snow-day",
+      "night": "meteocons:snow-night"
+    },
+    "fill": {
+      "day": "meteocons:snow-day-fill",
+      "night": "meteocons:snow-night-fill"
+    }
+  },
+  "77": {
+    "outline": {
+      "day": "meteocons:snowflake-day",
+      "night": "meteocons:snowflake-night"
+    },
+    "fill": {
+      "day": "meteocons:snowflake-day-fill",
+      "night": "meteocons:snowflake-night-fill"
+    }
+  },
+  "80": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-day-rain",
+      "night": "meteocons:partly-cloudy-night-rain"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-day-rain-fill",
+      "night": "meteocons:partly-cloudy-night-rain-fill"
+    }
+  },
+  "81": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-day-rain",
+      "night": "meteocons:partly-cloudy-night-rain"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-day-rain-fill",
+      "night": "meteocons:partly-cloudy-night-rain-fill"
+    }
+  },
+  "82": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-day-rain",
+      "night": "meteocons:partly-cloudy-night-rain"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-day-rain-fill",
+      "night": "meteocons:partly-cloudy-night-rain-fill"
+    }
+  },
+  "85": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-snow-day",
+      "night": "meteocons:partly-cloudy-snow-night"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-snow-day-fill",
+      "night": "meteocons:partly-cloudy-snow-night-fill"
+    }
+  },
+  "86": {
+    "outline": {
+      "day": "meteocons:partly-cloudy-snow-day",
+      "night": "meteocons:partly-cloudy-snow-night"
+    },
+    "fill": {
+      "day": "meteocons:partly-cloudy-snow-day-fill",
+      "night": "meteocons:partly-cloudy-snow-night-fill"
+    }
+  },
+  "95": {
+    "outline": {
+      "day": "meteocons:thunderstorms-day",
+      "night": "meteocons:thunderstorms-night"
+    },
+    "fill": {
+      "day": "meteocons:thunderstorms-day-fill",
+      "night": "meteocons:thunderstorms-night-fill"
+    }
+  },
+  "96": {
+    "outline": {
+      "day": "meteocons:thunderstorms-rain",
+      "night": "meteocons:thunderstorms-rain"
+    },
+    "fill": {
+      "day": "meteocons:thunderstorms-rain-fill",
+      "night": "meteocons:thunderstorms-rain-fill"
+    }
+  },
+  "99": {
+    "outline": {
+      "day": "meteocons:thunderstorms-rain",
+      "night": "meteocons:thunderstorms-rain"
+    },
+    "fill": {
+      "day": "meteocons:thunderstorms-rain-fill",
+      "night": "meteocons:thunderstorms-rain-fill"
+    }
+  }
+}

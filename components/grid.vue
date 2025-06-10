@@ -31,6 +31,8 @@ import Youtube from './youtube.vue'
 import WeatherWidget from './weatherWidget.vue'
 import Posts from './posts.vue'
 import Timer from './timer.vue'
+import Windyframe from './windyframe.vue'
+
 import 'gridstack/dist/gridstack.min.css'
 
 let idCounter = 0
@@ -58,6 +60,10 @@ const widgets = {
   },
   timer: {
     component: markRaw(Timer),
+    pos: { x: 0, y: 0, w: 4, h: 4 }
+  },
+  windy: {
+    component: markRaw(Windyframe),
     pos: { x: 0, y: 0, w: 4, h: 4 }
   }
 }
@@ -100,11 +106,15 @@ $on('addWidget', (payload) => {
 
 const gridRef = ref(null)
 let grid = null
-const items = ref([
+/*const items = ref([
   { id: 'about', x:0, y:0, w:6, h:10, path: '/about', component: markRaw(ContentRender), href: '/about', },
   { id: 'yt', x:6, y:0, w:3, h:4, component: markRaw(Youtube) },
   { id: 'weather', x:9, y:0, w: 3, h: 4, component: markRaw(WeatherWidget) },
   { id: 'posts', x:6, y:6, w:6, h:6, path: '/posts', component: markRaw(Posts), href: '/posts', }
+])*/
+
+const items = ref([
+  { id: 'weather', x:0, y:0, w: 12, h: 10, component: markRaw(WeatherWidget) }
 ])
 
 const column = 12 // 最大列數

@@ -59,7 +59,8 @@ const links = [
 const apps = [
   { name: 'YouTube', id: 'youtube', icon: 'logos:youtube-icon' },
   { name: 'Weather', id: 'weather', icon: 'material-symbols:cloud' },
-  { name: 'Timer', id: 'timer', icon: 'material-symbols:alarm' }
+  { name: 'Timer', id: 'timer', icon: 'material-symbols:alarm' },
+  { name: 'Windy', id: 'windy', icon: 'tabler:brand-windy' }
 ]
 
 const time = ref(DateTime.now().setZone('Asia/Taipei').toFormat('HH:mm'))
