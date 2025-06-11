@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/content',
     '@nuxtjs/mdc',
-    '@nuxthq/studio'
   ],
   tailwindcss: {
     config: {
@@ -17,9 +16,6 @@ export default defineNuxtConfig({
     }
   },
   content: {
-    preview: {
-      api: 'https://api.nuxt.studio'
-    },
     build: {
       markdown: {
         highlight: {
