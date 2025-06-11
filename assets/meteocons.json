@@ -261,22 +261,22 @@
   },
   "96": {
     "outline": {
-      "day": "meteocons:thunderstorms-rain",
-      "night": "meteocons:thunderstorms-rain"
+      "day": "meteocons:thunderstorms-day",
+      "night": "meteocons:thunderstorms-night"
     },
     "fill": {
-      "day": "meteocons:thunderstorms-rain-fill",
-      "night": "meteocons:thunderstorms-rain-fill"
+      "day": "meteocons:thunderstorms-day-fill",
+      "night": "meteocons:thunderstorms-night-fill"
     }
   },
   "99": {
     "outline": {
-      "day": "meteocons:thunderstorms-rain",
-      "night": "meteocons:thunderstorms-rain"
+      "day": "meteocons:thunderstorms-day",
+      "night": "meteocons:thunderstorms-night"
     },
     "fill": {
-      "day": "meteocons:thunderstorms-rain-fill",
-      "night": "meteocons:thunderstorms-rain-fill"
+      "day": "meteocons:thunderstorms-day-fill",
+      "night": "meteocons:thunderstorms-night-fill"
     }
   }
 }

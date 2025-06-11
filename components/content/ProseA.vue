@@ -2,7 +2,7 @@
   <NuxtLink
     :href="props.href"
     :target="props.target"
-    class="inline-flex gap-2 items-center text-base hover:scale-105 text-blue-600 dark:text-blue-400 transition-transform duration-200 ease-in-out"
+    class="inline-flex gap-2 items-center text-base hover:scale-105 text-blue-600 dark:text-blue-400 transition-transform duration-200 ease-in-out cursor-pointer"
   >
     <slot />
     <Icon name="material-symbols:link" />

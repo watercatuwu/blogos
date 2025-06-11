@@ -52,8 +52,7 @@ const { $emit } = useNuxtApp().$bus
 
 const links = [
   { name: 'Posts', id: 'posts', icon: 'material-symbols:article' },
-  { name: 'About', id: 'about', icon: 'material-symbols:info' },
-  { name: 'Contact', id: 'contact', icon: 'material-symbols:mail' },
+  { name: 'About', id: 'about', icon: 'material-symbols:info' }
 ]
 
 const apps = [

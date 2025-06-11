@@ -3,6 +3,11 @@
 </template>
 
 <script setup>
+useHead({
+	link: [
+		{ rel: 'icon', type: 'image/png', href: '/cap.png' },
+	]
+})
 </script>
 
 <style>

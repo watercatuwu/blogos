@@ -52,19 +52,19 @@ const widgets = {
   },
   youtube: {
     component: markRaw(Youtube),
-    pos: { x: 0, y: 0, w: 4, h: 4 }
+    pos: { x: 0, y: 0, w: 4, h: 10 }
   },
   weather: {
     component: markRaw(WeatherWidget),
-    pos: { x: 0, y: 0, w: 4, h: 4 }
+    pos: { x: 0, y: 0, w: 5, h: 5 }
   },
   timer: {
     component: markRaw(Timer),
-    pos: { x: 0, y: 0, w: 4, h: 4 }
+    pos: { x: 0, y: 0, w: 3, h: 4 }
   },
   windy: {
     component: markRaw(Windyframe),
-    pos: { x: 0, y: 0, w: 4, h: 4 }
+    pos: { x: 0, y: 0, w: 4, h: 5 }
   }
 }
  
@@ -113,9 +113,7 @@ let grid = null
   { id: 'posts', x:6, y:6, w:6, h:6, path: '/posts', component: markRaw(Posts), href: '/posts', }
 ])*/
 
-const items = ref([
-  { id: 'weather', x:0, y:0, w: 12, h: 10, component: markRaw(WeatherWidget) }
-])
+const items = ref([])
 
 const column = 12 // 最大列數
 const maxRow = 10 // 最大行數

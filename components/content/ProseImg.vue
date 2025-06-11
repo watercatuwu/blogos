@@ -1,12 +1,14 @@
 <template>
-  <component
-    class="rounded-md"
-    :is="ImageComponent"
-    :src="refinedSrc"
-    :alt="props.alt"
-    :width="props.width"
-    :height="props.height"
-  />
+  <div class="flex flex-col justify-center items-center gap-2">
+    <component
+      class="rounded-md"
+      :is="ImageComponent"
+      :src="refinedSrc"
+      :alt="props.alt"
+      :width="props.width"
+      :height="props.height"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">

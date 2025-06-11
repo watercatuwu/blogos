@@ -1,31 +1,33 @@
 <template>
-		<div class="bg-zinc-900 text-zinc-800 dark:text-zinc-100 min-h-screen flex flex-col">
-			<div class="relative flex-grow border-zinc-800 border-2 rounded-xl overflow-auto flex flex-col w-full h-full">
-				<div id="bg" class="absolute inset-0 bg-cover bg-center"></div>
-				<Grid />
-			</div>
-			<Dock />
-			<Toaster />
-		</div>
+    <div class="text-zinc-800 dark:text-zinc-100 min-h-screen max-h-screen">
+        <div id="bg" class="absolute inset-0 bg-cover bg-center h-full -z-10"></div>
+        <h1 class="absolute bottom-0 left-4 text-[10vw] leading-none pb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Welcome to<br>Watercat's Blog</h1>
+        
+        <div class="flex flex-col gap-4 items-end p-4">
+            <h2 class="text-3xl md:text-5xl">You can</h2>
+            <NuxtLink v-for="link in links" :to="link.href" class="flex items-center gap-2 md:text-xl hover:text-baseline mr-2 hover:mr-4 duration-200 ease-in-out">
+                <Icon :name="link.icon" />
+                {{ link.content }}
+            </NuxtLink>
+        </div>
+    </div>
 </template>
 
 <script setup>
-import Grid from '/components/grid.vue'
-import Dock from '/components/dock.vue'
-import Toaster from '/components/toaster.vue'
+const links = [
+    { href: "/desktop", content: "Try BlogOS(Desktop)", icon: "material-symbols:desktop-windows" },
+    { href: "/about", content: "Learn more about me", icon: "material-symbols:info" }
+]
 
 useHead({
-	title: 'Watercat BlogOS',
+	title: "Watercat's Blog",
 	meta: [
-		{ name: 'description', content: 'A desktop-like blog experience.' },
-		{ property: 'og:title', content: 'Watercat Blog OS' },
-		{ property: 'og:description', content: 'A desktop-like blog experience.' },
+		{ name: 'description', content: "Discover my dream." },
+		{ property: 'og:title', content: "Watercat's Blog" },
+		{ property: 'og:description', content: "Discover my dream." },
 		{ property: 'og:type', content: 'website' },
 		{ property: 'og:url', content: `https://watercat.vercel.app` },
 		{ property: 'og:image', content: '/cap.png' }
-	],
-	link: [
-		{ rel: 'icon', type: 'image/png', href: '/cap.png' },
 	]
 })
 </script>

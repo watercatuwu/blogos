@@ -19,6 +19,11 @@
           {{  weatherData.current_units.temperature_2m }}
         </h1>
         <h2>{{ weatherCodeDescriptions[weatherData.current.weather_code] }}</h2>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400">
+          體感溫度
+          {{ weatherData.current.apparent_temperature }}
+          {{ weatherData.current_units.apparent_temperature }}
+        </p>
         <div class="flex items-center">
           <Icon name="material-symbols:arrow-upward-alt-rounded" class="text-3xl text-red-400" />
           <p>{{ Math.max(...weatherData.hourly.temperature_2m) }}</p>
@@ -26,27 +31,27 @@
           <p>{{ Math.min(...weatherData.hourly.temperature_2m) }}</p>
         </div>
       </div>
-      <Icon :name="meteocons.default[weatherData.current.weather_code].fill.day" style="font-size: 10rem" />
+      <Icon :name="meteocons.default[weatherData.current.weather_code].fill[`${weatherData.current.is_day ? 'day':'night'}`]" style="font-size: 10rem" />
     </div>
     <div class="grid grid-cols-2 gap-2">
       <div class="flex text-lg justify-center items-center bg-zinc-300 dark:bg-zinc-700 rounded-lg py-8">
         <Icon name="meteocons:raindrop-fill" class="text-5xl" />
         <p>{{ weatherData.current.precipitation }}
-          {{  weatherData.current_units.precipitation }}
+          {{ weatherData.current_units.precipitation }}
         </p>
       </div>
 
       <div class="flex text-lg justify-center items-center bg-zinc-300 dark:bg-zinc-700 rounded-lg py-8">
         <Icon name="meteocons:humidity-fill" class="text-5xl" />
-        <span>{{ weatherData.current.relative_humidity_2m }}
-          {{  weatherData.current_units.relative_humidity_2m }}
-        </span>
+        <p>{{ weatherData.current.relative_humidity_2m }}
+          {{ weatherData.current_units.relative_humidity_2m }}
+        </p>
       </div>
 
       <div class="flex text-lg justify-center items-center bg-zinc-300 dark:bg-zinc-700 rounded-lg py-8">
         <Icon name="meteocons:wind" class="text-5xl" />
         <p>{{ weatherData.current.wind_speed_10m }}
-          {{  weatherData.current_units.wind_speed_10m }}
+          {{ weatherData.current_units.wind_speed_10m }}
         </p>
       </div>
 
@@ -54,7 +59,7 @@
         <Icon name="meteocons:thermometer-fill" class="text-5xl" />
         <p>
           {{ weatherData.current.apparent_temperature }}
-          {{  weatherData.current_units.apparent_temperature }}
+          {{ weatherData.current_units.apparent_temperature }}
         </p>
       </div>
 
@@ -63,7 +68,15 @@
         <p>
           {{ getDirection(weatherData.current.wind_direction_10m) }}
           {{ weatherData.current.wind_direction_10m }}
-          {{  weatherData.current_units.wind_direction_10m }}
+          {{ weatherData.current_units.wind_direction_10m }}
+        </p>
+      </div>
+
+      <div class="flex text-lg justify-center items-center bg-zinc-300 dark:bg-zinc-700 rounded-lg py-8">
+        <Icon name="meteocons:umbrella-fill" class="text-5xl" />
+        <p>
+          {{ weatherData.daily.precipitation_probability_max[0] }}
+          {{ weatherData.daily_units.precipitation_probability_max }}
         </p>
       </div>
     </div>
@@ -86,12 +99,48 @@
           <span class="text-sm">
             {{ DateTime.fromISO(item.time).toFormat("H:mm") }}
           </span>
-          <Icon :name="meteocons.default[item.weather_code].fill.day" class="text-3xl" />
+          <Icon :name="meteocons.default[item.weather_code].fill[`${item.is_day ? 'day':'night'}`]" class="text-3xl" />
           <span class="text-sm">
             {{ item.temperature_2m }}{{  weatherData.hourly_units.temperature_2m }}
           </span>
           <span class="text-sm">
             {{ item.precipitation_probability }}{{  weatherData.hourly_units.precipitation_probability }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-2xl mb-4">三日預報</h2>
+      <div class="flex flex-row overflow-x-auto">
+        <div class="flex flex-col justify-center items-center flex-shrink-0 w-16 mx-2">
+          <span class="text-sm text-zinc-600 dark:text-zinc-400">
+            時間
+          </span>
+          <div style="height: 1.875rem;"></div>
+          <span class="text-sm text-zinc-600 dark:text-zinc-400">
+            氣溫
+          </span>
+          <span class="text-sm text-zinc-600 dark:text-zinc-400">
+            降雨機率
+          </span>
+        </div>
+        <div class="flex flex-col justify-center items-center w-48 p-4 rounded-lg" :class="index==0 ? ['bg-zinc-700'] : []" v-for="(item, index) in dailyWeather(weatherData)" :key="index">
+          <span class="text-sm">
+            {{ DateTime.fromISO(item.time).toFormat("MMMM dd ccc") }}
+          </span>
+          <Icon :name="meteocons.default[item.weather_code].fill.day" class="text-3xl" />
+          <div class="flex text-sm items-center">
+            <div class="flex items-center">
+              <Icon name="material-symbols:arrow-upward-alt-rounded" class="text-lg text-red-400" />
+              {{ item.temperature_2m_max }}{{  weatherData.daily_units.temperature_2m_max }}
+            </div>
+            <div class="flex items-center">
+              <Icon name="material-symbols:arrow-downward-alt-rounded" class="text-lg text-blue-400" />
+              {{ item.temperature_2m_min }}{{  weatherData.daily_units.temperature_2m_min }}
+            </div>
+          </div>
+          <span class="text-sm">
+            {{ item.precipitation_probability_max }}{{  weatherData.daily_units.precipitation_probability_max }}
           </span>
         </div>
       </div>
@@ -175,8 +224,8 @@ const getWeather = async (latitude, longitude) => {
       latitude,
       longitude,
       current: "temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m,wind_direction_10m",
-      hourly: "temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,weather_code",
-      daily: "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,uv_index_max",
+      hourly: "temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,weather_code,is_day,uv_index",
+      daily: "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,uv_index_max,sunrise,sunset,sunshine_duration,precipitation_probability_max,weather_code",
       timezone: "Asia/Taipei",
       forecast_days: 3
     }
@@ -233,9 +282,8 @@ const getDirection = (angle) => {
     return directions[index];
 }
 
-// 為了防止在weatherData取得之前存取
+// 為了防止在weatherData取得之前存取，所以只好導入weatherData
 const hourlyWeather = (weatherData) => {
-  console.log(now.toSeconds())
   return weatherData.hourly.time
     .map((time, index)=>({
       time: time,
@@ -243,9 +291,23 @@ const hourlyWeather = (weatherData) => {
       relative_humidity_2m: weatherData.hourly.relative_humidity_2m[index],
       apparent_temperature: weatherData.hourly.apparent_temperature[index],
       precipitation_probability: weatherData.hourly.precipitation_probability[index],
-      weather_code: weatherData.hourly.weather_code[index]
+      weather_code: weatherData.hourly.weather_code[index],
+      is_day: weatherData.hourly.is_day[index]
     }))
     .filter((value)=>DateTime.fromISO(value.time).hour>=now.hour) // 未來預報
+}
+
+const dailyWeather = (weatherData) => {
+  return weatherData.daily.time
+    .map((time, index)=>({
+      time: time,
+      temperature_2m_max: weatherData.daily.temperature_2m_max[index],
+      temperature_2m_min: weatherData.daily.temperature_2m_min[index],
+      apparent_temperature_max: weatherData.daily.apparent_temperature_max[index],
+      apparent_temperature_min: weatherData.daily.apparent_temperature_min[index],
+      precipitation_probability_max: weatherData.daily.precipitation_probability_max[index],
+      weather_code: weatherData.daily.weather_code[index]
+    }))
 }
 
 onMounted(() => {
