@@ -27,7 +27,7 @@ useHead({
 		{ property: 'og:description', content: "Explore my dream." },
 		{ property: 'og:type', content: 'website' },
 		{ property: 'og:url', content: `https://watercat.vercel.app` },
-		{ property: 'og:image', content: '/cap.png' }
+		{ property: 'og:image', content: '/preview.png' }
 	]
 })
 </script>
