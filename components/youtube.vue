@@ -17,7 +17,7 @@
     </div>
     <div class="flex-1 overflow-y-auto">
         <div class="flex flex-col gap-2">
-            <div @click="nowPlayingID=item.snippet.resourceId.videoId" v-for="item in playList" :key=item.snippet.resourceId.videoId :class="(nowPlayingID === item.snippet.resourceId.videoId) ? ['border-2 border-zinc-800 dark:border-zinc-200'] : []" class="flex bg-zinc-300 hover:bg-zinc-400 dark:bg-zinc-700 dark:hover:bg-zinc-600 h-24 rounded-lg cursor-pointer">
+            <div @click="nowPlayingID=item.snippet.resourceId.videoId" v-for="item in playList" :key=item.snippet.resourceId.videoId :class="(nowPlayingID === item.snippet.resourceId.videoId) ? ['border-2 border-zinc-800 dark:border-zinc-200'] : []" class="flex bg-zinc-300 hover:bg-zinc-400 dark:bg-zinc-700 dark:hover:bg-zinc-600 h-24 rounded-lg duration-500 ease-in-out cursor-pointer">
                 <div class="p-1 flex gap-2">
                     <img class="h-full rounded-lg" :src=item.snippet.thumbnails.maxres.url />
                     <div>

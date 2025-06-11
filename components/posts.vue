@@ -2,7 +2,7 @@
 <div class="flex flex-col gap-2">
     <div v-for="(post, index) in posts" :key="index" class="flex">
         <div class="flex flex-col p-4 bg-zinc-300 dark:bg-zinc-700 rounded-l-lg shadow-md w-2/3 space-y-2">
-            <a :target="isDesk ? '_blank' : '_self'" :href=post.path class="text-2xl hover:underline">{{ post.title }}</a>
+            <a :target="isDesk ? '_blank' : '_self'" :href=post.path class="text-2xl hover:underline" rel="noopener noreferrer">{{ post.title }}</a>
             <p class="text-sm text-zinc-600 dark:text-zinc-400">{{ post.meta.date }}</p>
             <span class="text-sm text-zinc-600 dark:text-zinc-400">{{ post.meta.author }}</span>
             <p>{{ post.description }}</p>

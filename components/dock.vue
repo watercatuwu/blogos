@@ -4,7 +4,7 @@
   <Transition name="appmenu">
   <div v-show="appMenuToggle" class="absolute bottom-18 left-0 w-84 h-96 p-8 z-50 bg-zinc-200 dark:bg-zinc-800 rounded-lg shadow-md">
     <div class="grid grid-cols-3 gap-8">
-      <button v-for="app in apps" :key="app.id" @click="$emit('addWidget', {id: app.id, isPost: false})" class="p-2 w-full aspect-square flex flex-col gap-2 items-center justify-center rounded-lg cursor-pointer hover:bg-zinc-300 dark:hover:bg-zinc-700">
+      <button v-for="app in apps" :key="app.id" @click="$emit('addWidget', {id: app.id, isPost: false})" class="p-2 w-full aspect-square flex flex-col gap-2 items-center justify-center rounded-lg cursor-pointer hover:bg-zinc-300 dark:hover:bg-zinc-700 duration-500 ease-in-out">
         <Icon :name="app.icon" class="text-2xl" />
         <span class="text-sm text-zinc-600 dark:text-zinc-400">{{ app.name }}</span>
       </button>
@@ -23,7 +23,7 @@
         <button
           v-for="link in links" 
           @click="$emit('addWidget', {id: link.id, isPost: false})"
-          class="flex items-center my-1 p-4 hover:bg-zinc-300 dark:hover:bg-zinc-700 rounded-full transition-colors gap-2 cursor-pointer"
+          class="flex items-center my-1 p-4 hover:bg-zinc-300 dark:hover:bg-zinc-700 rounded-full gap-2 cursor-pointer duration-500 ease-in-out"
         >
           <Icon :name=link.icon />
           <span class="hidden md:block">{{link.name}}</span>

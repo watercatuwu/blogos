@@ -10,7 +10,7 @@
                 <Icon name="material-symbols:open-in-new" />
                 open in tab
               </a>
-              <button class="w-3 h-3 bg-red-400 rounded-full" @click="removewidget(item.id)"></button>
+              <button class="w-3 h-3 bg-red-400 rounded-full cursor-pointer hover:bg-red-600 duration-500 ease-in-out" @click="removewidget(item.id)"></button>
             </div>
         </div>
         <div class="flex-grow overflow-auto px-4 pt-2 pb-4 rounded-b-lg">
