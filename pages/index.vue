@@ -22,9 +22,9 @@ const links = [
 useHead({
 	title: "Watercat's Blog",
 	meta: [
-		{ name: 'description', content: "Discover my dream." },
+		{ name: 'description', content: "Explore my dream." },
 		{ property: 'og:title', content: "Watercat's Blog" },
-		{ property: 'og:description', content: "Discover my dream." },
+		{ property: 'og:description', content: "Explore my dream." },
 		{ property: 'og:type', content: 'website' },
 		{ property: 'og:url', content: `https://watercat.vercel.app` },
 		{ property: 'og:image', content: '/cap.png' }
