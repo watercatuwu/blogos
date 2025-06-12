@@ -11,7 +11,7 @@ useHead({
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Ultra&display=swap');
 
 .jetbrains-mono {
   font-family: "JetBrains Mono", monospace;
